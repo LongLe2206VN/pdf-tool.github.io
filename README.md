@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PDF Merger
+
+A beautiful, modern single-page web application for merging multiple PDF files into one document.
+
+## Features
+
+- 🎯 **Simple Drag & Drop** - Drag and drop PDF files or click to browse
+- 📑 **Multiple Files** - Upload and merge as many PDFs as you need
+- ↕️ **Reorder Files** - Arrange files in any order before merging
+- 🎨 **Modern UI** - Beautiful gradient design with dark mode support
+- ⚡ **Client-Side Processing** - All PDF processing happens in your browser (no server upload needed)
+- 💾 **Instant Download** - Merged PDF downloads automatically
+
+## Tech Stack
+
+- **Next.js 16** - React framework with App Router
+- **TypeScript** - Type-safe code
+- **Tailwind CSS** - Modern, responsive styling
+- **pdf-lib** - Client-side PDF manipulation
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.17 or later
+
+### Installation
+
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build for Production
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## How to Use
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Upload PDFs** - Click "Choose PDF Files" or drag and drop PDF files onto the upload area
+2. **Reorder** - Use the up/down arrows to arrange files in the desired order
+3. **Merge** - Click "Merge PDFs & Download" to combine all files and download the result
+4. **Remove** - Click the X button to remove individual files if needed
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features in Detail
 
-## Deploy on Vercel
+### Client-Side Processing
+All PDF merging happens entirely in your browser using the pdf-lib library. No files are uploaded to any server, ensuring complete privacy and security.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Drag and Drop Support
+Simply drag PDF files from your file explorer directly onto the page for quick uploading.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### File Management
+- View all uploaded files with their names
+- Reorder files using intuitive up/down controls
+- Remove individual files or clear all at once
+- Visual feedback during the merge process
+
+### Responsive Design
+Works seamlessly on desktop, tablet, and mobile devices with a beautiful gradient background and smooth animations.
+
+## License
+
+MIT
